@@ -4,7 +4,7 @@ const About = () => {
     return (
         <>
           <Layout>
-          <div className="container">
+          <div className="container py-5">
             <h1>About Us</h1>
             <p>
                 Welcome to our restaurant! We are dedicated to providing you with the best dining experience possible.

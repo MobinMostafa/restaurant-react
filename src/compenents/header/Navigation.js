@@ -1,22 +1,33 @@
-import {Navbar, NavbarBrand,Nav,NavItem,NavLink} from 'reactstrap'
-import {Link} from 'react-router'
+import { useState } from 'react';
+import {Navbar, NavbarBrand,Nav,NavItem, Collapse, NavbarToggler,} from 'reactstrap'
+import {NavLink} from 'react-router'
 
 const Navigation = () => {
-  return (
-    <Navbar color="dark" dark>
-       <div className="container">
-          <NavbarBrand to="/">Restaurent</NavbarBrand>
-          <Nav>
-            <NavItem>
-             <NavLink> <Link to="/">Home</Link> </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink> <Link to="/about">About</Link> </NavLink>
-            </NavItem>
+  const [isOpen, setIsOpen] = useState(false);
 
-          </Nav>
+  const toggle = () => setIsOpen(!isOpen);
+  return (
+   <div className="container-fluid bg-dark fixed-top" style={{zIndex: 10 }}> 
+       <div className="container">
+       <Navbar color="dark" dark expand="md">
+      
+      <NavbarBrand href="/">Restaurent </NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+      <Nav className='ms-auto' navbar>
+        <NavItem>
+          <NavLink to="/" className='nav-link'>Home</NavLink>
+        </NavItem>
+        <NavItem>
+         <NavLink to="/about" className='nav-link'>About</NavLink> 
+        </NavItem>
+       
+      </Nav>
+      </Collapse>
+      </Navbar>
        </div>
-    </Navbar>
+   </div>
+
   )
 }
 
