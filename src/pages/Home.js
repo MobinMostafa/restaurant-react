@@ -3,6 +3,7 @@ import Layout from '../compenents/Layout'
 import Menu from '../compenents/body/Menu'
 
 const Home = () => {
+   document.title = "Home"
   return (
    <>
     <Layout>

@@ -21,7 +21,9 @@ const Navigation = () => {
         <NavItem>
          <NavLink to="/about" className='nav-link'>About</NavLink> 
         </NavItem>
-       
+        <NavItem>
+          <NavLink to="/contact" className='nav-link'>Contact</NavLink>
+        </NavItem>
       </Nav>
       </Collapse>
       </Navbar>

@@ -1,6 +1,7 @@
 import Layout from "../compenents/Layout";
 
 const About = () => {
+    document.title = "About"
     return (
         <>
           <Layout>
